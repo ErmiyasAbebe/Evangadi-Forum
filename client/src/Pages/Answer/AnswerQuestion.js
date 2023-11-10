@@ -7,7 +7,6 @@ import axios from "axios";
 const AnswerQuestion = (props) => {
   let { questionId } = useParams();
   // console.log(typeof questionId);
-  questionId = parseInt(questionId?.slice(1, 2));
   // questionId = parseInt(questionId);
   const [userData, setUserData] = useContext(UserContext);
   console.log(userData);
@@ -58,7 +57,7 @@ const AnswerQuestion = (props) => {
       setPrevAnswers(() => {
         return answers.data?.data;
       });
-      console.log(">>>>>>prevAnswers ", prevAnswers);
+      // console.log(">>>>>>prevAnswers ", prevAnswers);
     };
     try {
       fetchAnswers();
